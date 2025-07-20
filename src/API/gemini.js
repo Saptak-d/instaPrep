@@ -14,11 +14,11 @@ export const fetchGeminiResponse = async (topic, apiKey) => {
             {
               parts: [
                 {
-                  text: `Give me 25 of the most commonly asked and important technical interview questions for the topic: "${topic}".
+                  text: `Give me 27 of the most commonly asked and important technical interview questions for the topic: "${topic}".
 
 These questions should be relevant to top companies like TCS, Wipro, Amazon, SAP Labs, Accenture, Infosys, Cognizant, etc. Include recent questions asked on platforms like GeeksforGeeks, LeetCode, and LinkedIn.
 
-Each answer should be concise and informative, around 4 to 6 lines long. Focus on quality, clarity, and usefulness for real interviews.
+Each answer should be concise and informative, around 5 to 6 lines long. Focus on quality, clarity, and usefulness for real interviews , and you can collect the questions also from GFG , linkedin ,Leetcode ,quera ,and other social media where the people post about interview question they have faced .
 
 Format the response like:
 

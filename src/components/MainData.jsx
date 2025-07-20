@@ -29,9 +29,9 @@ export default function MainData(){
 
 
     return(
-        <div className="bg-amber-100 text-center">
+        <div className="w-full min-h-screen bg-gray-900 text-white text-center p-8">
 
-                <FromBar setSelectedTopic={setSelectedTopic} />
+                <FromBar setSelectedTopic={setSelectedTopic} /> <br />
            
                  <ShowTopics setSelectedTopic={setSelectedTopic}/>       
 
