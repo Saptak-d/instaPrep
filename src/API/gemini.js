@@ -1,6 +1,6 @@
 // src/api/gemini.js
 
-export const fetchGeminiResponse = async (topic, apiKey) => {
+export const fetchGeminiResponse = async (topic, apiKey , numbers = 27) => {
   try {
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
@@ -14,7 +14,7 @@ export const fetchGeminiResponse = async (topic, apiKey) => {
             {
               parts: [
                 {
-                  text: `Give me 27 of the most commonly asked and important technical interview questions for the topic: "${topic}".
+                  text: `Give me ${numbers} of the most commonly asked and important technical interview questions for the topic: "${topic}".
 
 These questions should be relevant to top companies like TCS, Wipro, Amazon, SAP Labs, Accenture, Infosys, Cognizant, etc. Include recent questions asked on platforms like GeeksforGeeks, LeetCode, and LinkedIn.
 

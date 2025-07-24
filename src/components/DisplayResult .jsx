@@ -1,6 +1,12 @@
+import Loader from "./Loader";
+
 export default function DisplayResult({ data, loading,topic }) {
   if (loading) {
-    return <p className="text-blue-600 text-lg">Loading...</p>;
+   return (
+      <div className="w-full min-h-screen flex  items-center justify-center">
+        <Loader />
+      </div>
+    );
   }
 
   if (data === null) {

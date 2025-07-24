@@ -1,14 +1,19 @@
 import { useState } from "react"
 
 
-export default  function FromBar({setSelectedTopic}){
+export default  function FromBar({setSelectedTopic ,setopvalue}){
     let [topic,settopic] = useState("DBMS");
+    const [val,setval] = useState(30);
    let handleOnchange = (evn)=>{
       settopic(evn.target.value);
    }
    let submithandle = (evn)=>{
        evn.preventDefault();
         setSelectedTopic(topic);
+        setopvalue(val);
+   }
+   let handleVal = (evn) =>{
+      setval(evn.target.value) 
    }
 
 return (
@@ -23,8 +28,19 @@ return (
         type="text"
         onChange={handleOnchange}
         placeholder="Eg: DBMS, React, DSA"
-        className="w-full sm:flex-1 px-4 py-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+        className="w-full sm:flex-1 px-4 py-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 border focus:bg-gray-800    border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
       />
+ <select
+   onChange={handleVal} value={val}    className="w-full sm:w-24 h-8 px-4 text-sm text-center bg-gray-800 text-white rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+>
+  <option value="20">20</option>
+  <option value="40">40</option>
+  <option value="60">60</option>
+  <option value="80">80</option>
+
+</select>
+
+
 
       <button
         type="submit"
