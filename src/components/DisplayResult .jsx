@@ -2,11 +2,12 @@ import Loader from "./Loader";
 
 export default function DisplayResult({ data, loading,topic }) {
   if (loading) {
-   return (
-      <div className="w-full min-h-screen flex  items-center justify-center">
-        <Loader />
-      </div>
-    );
+  return (
+  <div className="w-full h-[80vh] flex items-center justify-center">
+    <Loader />
+  </div>
+);
+
   }
 
   if (data === null) {

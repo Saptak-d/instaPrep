@@ -12,25 +12,25 @@ export const fetchGeminiResponse = async (topic, apiKey , numbers = 27) => {
         body: JSON.stringify({
           contents: [
             {
-              parts: [
-                {
-                  text: `Give me ${numbers} of the most commonly asked and important technical interview questions for the topic: "${topic}".
+             parts: [
+  {
+    text: `Give me exactly ${numbers} of the most commonly asked and important technical interview questions for the topic: "${topic}".
 
-These questions should be relevant to top companies like TCS, Wipro, Amazon, SAP Labs, Accenture, Infosys, Cognizant, etc. Include recent questions asked on platforms like GeeksforGeeks, LeetCode, and LinkedIn.
+These questions should be relevant to companies like TCS, Wipro, Amazon, SAP Labs, Accenture, Infosys, Cognizant, etc., and should be based on actual questions reported on platforms like GeeksforGeeks, LeetCode, LinkedIn, Quora, and other social media where candidates share their real interview experiences.
 
-Each answer should be concise and informative, around 5 to 6 lines long. Focus on quality, clarity, and usefulness for real interviews , and you can collect the questions also from GFG , linkedin ,Leetcode ,quera ,and other social media where the people post about interview question they have faced .
+For **each** question, you **must** provide a complete and clear answer in 5 to 6 lines. Every question should be followed by its answer. Do not include any questions without an answer.
 
-Format the response like:
+Format your response strictly as:
 
-Question 1: ...
+Question 1: [Insert question here]  
+Answer: [Insert concise and informative answer here]
+
+Question 2: ...  
 Answer: ...
 
-Question 2: ...
-Answer: ...
-
-Do NOT include any extra commentary or introduction.`
-                },
-              ],
+Do NOT add any extra explanation, introduction, conclusion, or commentary — only the question and answer pairs as specified. Make sure all ${numbers} Q&A pairs are present and well-formatted.`
+  }
+],
             },
           ],
         }),
